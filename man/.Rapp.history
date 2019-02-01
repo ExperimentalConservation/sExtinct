@@ -1,0 +1,314 @@
+tools::showNonASCII( readLines(OLE.Rd))
+tools::showNonASCII( readLines(.))
+tools::showNonASCII( readLines("~Desktop/sExtinct/man/OLE.Rd"))
+?readLines
+tools::showNonASCII( readLines(file="~Desktop/sExtinct/man/OLE.Rd"))
+tools::showNonASCII( readLines(file("~Desktop/sExtinct/man/OLE.Rd")))
+file("~Desktop/sExtinct/man/OLE.Rd")
+tools::showNonASCII( readLines(file("~Desktop/sExtinct/man/OLE.Rd")))
+showNonASCIIfile("~Desktop/sExtinct/man/OLE.Rd")
+showNonASCII(c(\name{OLE}#
+\alias{OLE}#
+\alias{OLE.fun}#
+\title{Optimal linear estimation}#
+\description{#
+A function that calculates the predcted date of extinction using the optimal lienar estimation technique proposed by Roberts and Solow (2003) and Solow (2005). Differs from other techniques in this package as it requires only data to produce a point estimate of the date of extinction (not dependant on 1-alpha CI), and uses alpha to calculate the upper and lower 1-alpha CI. #
+}#
+\usage{#
+OLE(data, alpha)#
+}#
+#
+\arguments{#
+  \item{data}{#
+A data.frame with two columns, the first containing the year at which a sighting has (or as not) occured, the second a column of the number of sightings that have occured in each year. Column names are not restricted. Data msut be ranked from oldest at the top, to most recent at the bottom, and restricted to a single row per year. See example.data. #
+}#
+  \item{alpha}{#
+A 1-alpha confidence interval is calculated for a given value of alpha, typically set as 0.05 (i.e. a 95\% CI). OLE produces an upper and lower confidence interval estimate, the lower obviously bound by the last sighting event. See Clements et al. for a discussion on the use of 95\% CI's produced by OLE.#
+}#
+}#
+\details{#
+}#
+\value{#
+}#
+\references{#
+Clements, C. F., Worsfold, N., Warren, P., Collen, B., Blackburn, T., Clark, N., & Petchey, O. L. (n.d.). Experimentally testing an extinction estimator: Solow’s Optimal Linear Estimation model. Journal of Animal Ecology, In press.#
+#
+Roberts, D. L., & Solow, A. R. (2003). Flightless birds: When did the dodo become extinct? Nature, 426(6964), 245. #
+#
+Solow. (2005). Inferring extinction from a sighting record. Mathematical Biosciences, 195(1), 47-55.#
+}#
+\author{Christopher Clements}#
+#
+\note{}#
+#
+\seealso{}#
+#
+\examples{#
+	data(example.data)#
+    OLE.fun(example.data, alpha=0.05)#
+}#
+ ))
+?Tools
+?tools
+library(tools)
+?tools
+?showNonASCII()
+showNonASCII("~Desktop/sExtinct/man/OLE.Rd")
+showNonASCIIfile("~Desktop/sExtinct/man/OLE.Rd")
+showNonASCII("~Desktop/sExtinct/man/OLE.Rd")
+out <- c(#
+"fa\xE7ile test of showNonASCII():",#
+"\\details{",#
+"   This is a good line",#
+"   This has an \xfcmlaut in it.",#
+"   OK again.",#
+"}")#
+f <- tempfile()#
+cat(out, file = f, sep = "\n")
+f
+out
+showNonASCIIfile(f)
+showNonASCII(x)
+out<-c("Clements, C. F., Worsfold, N., Warren, P., Collen, B., Blackburn, T., Clark, N., & Petchey, O. L. (n.d.). Experimentally testing an extinction estimator: Solow’s Optimal Linear Estimation model. Journal of Animal Ecology, In press.#
+#
+Roberts, D. L., & Solow, A. R. (2003). Flightless birds: When did the dodo become extinct? Nature, 426(6964), 245. #
+#
+Solow. (2005). Inferring extinction from a sighting record. Mathematical Biosciences, 195(1), 47-55.#
+")
+out
+f <- tempfile()
+cat(out, file = f, sep = "\n")
+showNonASCIIfile(f)
+out<-c("Clements, C. F., Worsfold, N., Warren, P., Collen, B., Blackburn, T., Clark, N., & Petchey, O. L. Experimentally testing an extinction estimator: Solow’s Optimal Linear Estimation model. Journal of Animal Ecology, In press.#
+#
+Roberts, D. L., & Solow, A. R. (2003). Flightless birds: When did the dodo become extinct? Nature, 426(6964), 245. #
+#
+Solow. (2005). Inferring extinction from a sighting record. Mathematical Biosciences, 195(1), 47-55.#
+")
+f <- tempfile()
+cat(out, file = f, sep = "\n")
+showNonASCIIfile(f)
+out<-c("Clements, C. F., Worsfold, N., Warren, P., Collen, B., Blackburn, T., Clark, N., & Petchey, O. L. Experimentally testing an extinction estimator: Solows Optimal Linear Estimation model. Journal of Animal Ecology, In press.#
+#
+Roberts, D. L., & Solow, A. R. (2003). Flightless birds: When did the dodo become extinct? Nature, 426(6964), 245. #
+#
+Solow. (2005). Inferring extinction from a sighting record. Mathematical Biosciences, 195(1), 47-55.#
+")
+f <- tempfile()
+cat(out, file = f, sep = "\n")
+showNonASCIIfile(f)
+out<-c("Burgman, M. A., Grimson, R. C., & Ferson, S. (1995). Inferring Threat from Scientific Collections. Conservation Biology, 9(4), 923–928. #
+Solow. (1993). Inferring extinction from sighting data. Ecology, 74(3), 962-964.#
+Solow. (2005). Inferring extinction from a sighting record. Mathematical Biosciences, 195(1), 47-55.#
+")
+f <- tempfile()
+cat(out, file = f, sep = "\n")
+showNonASCIIfile(f)
+out<-c("Burgman, M. A., Grimson, R. C., & Ferson, S. (1995). Inferring Threat from Scientific Collections. Conservation Biology, 9(4), 923-928. #
+Solow. (1993). Inferring extinction from sighting data. Ecology, 74(3), 962-964.#
+Solow. (2005). Inferring extinction from a sighting record. Mathematical Biosciences, 195(1), 47-55.#
+")
+f <- tempfile()
+cat(out, file = f, sep = "\n")
+showNonASCIIfile(f)
+out<-c("Burgman, M. A., Grimson, R. C., & Ferson, S. (1995). Inferring Threat from Scientific Collections. Conservation Biology, 9(4), 923-928. #
+#
+Roberts, D. L., & Solow, A. R. (2003). Flightless birds: When did the dodo become extinct? Nature, 426(6964), 245. #
+#
+Robson, D. S., & Whitlock, J. H. (1964). Estimation of a Truncation Point. Biometrika, 31(1/2), 33-39.#
+#
+Solow. (1993). Inferring extinction from sighting data. Ecology, 74(3), 962–964.#
+Solow. (2005). Inferring extinction from a sighting record. Mathematical Biosciences, 195(1), 47-55.#
+#
+Strauss, D., & Sadler, P. M. (1989). Classical confidence intervals and Bayesian probability estimates for ends of local taxon ranges. Mathematical Geology, 21(4), 411-427. #
+")
+f <- tempfile()
+cat(out, file = f, sep = "\n")
+showNonASCIIfile(f)
+out<-c("Solow. (1993). Inferring extinction from sighting data. Ecology, 74(3), 962-964.#
+")
+f <- tempfile()
+cat(out, file = f, sep = "\n")
+showNonASCIIfile(f)
+library(sExtinct)
+'rm -rf /var/folders/fg/cf800hzs1d7d40f7pps5rj2h0000gn/T//RtmpwuKqvB/Rd2pdf5e54ed38d6b'
+rm -rf /var/folders/fg/cf800hzs1d7d40f7pps5rj2h0000gn/T//RtmpwuKqvB/Rd2pdf5e54ed38d6b'
+library(sExtinct)
+data(example.data)
+example.data
+run.all(example.data, 0.1, 1950, FALSE, TRUE)
+example.data[,2]<-example.data[,2]/example.data[,2]
+example.data
+run.all(example.data, 0.1, 1950, FALSE, TRUE)
+run.all(example.data, 0.1, 2012, FALSE, TRUE)
+run.all(example.data, 0.05, 2012, FALSE, TRUE)
+rm(list=ls())#
+#
+set.seed(1)#
+library(psych)#
+library(sExtinct)#
+#
+###
+ddday1<-read.csv("~/Desktop/EXP2/Results/Results1.csv")#
+ddday2<-read.csv("~/Desktop/EXP2/Results/Results2.csv")#
+#
+dd<-rbind(ddday1,ddday2)#
+#
+dd<-transform(dd, td=(((dd$Count/dd$Weight)*30)+1))#
+#
+dd<-na.omit(dd)#
+#
+dd<-subset(dd, dd$Community=="Loxocephallus")#
+#
+dd<-subset(dd, Treatment!="D3")#
+dd<-subset(dd, Treatment!="D1.5")#
+treats<-sort(unique(dd$Treatment))#
+#
+dd <- transform(dd, p.a=ifelse(Count>0, 1, 0))#
+#
+ddsplit<-split(dd, list(dd$Jar))#
+search<-seq(0.01, 0.95, 0.01)	#
+## calculate probability of observation. The chance of observation is the area of the habitat NOT sampled, to the power of the total density of the species in the microcosm (td) multiplied by the % of the habitat searched (the search effort). So as the numbers in the microcosm increase, and the search effort increases the chance of not observing an individual decreases.            #
+##CHANCE OF SEEING AT LEAST 1 INDIVIDUAL#
+#
+results<-NULL#
+counter=0#
+for(i in 1:length(ddsplit)){		#
+	##i=1#
+	for(l in 1:length(search)){	#
+	##l=1#
+	counter<-counter+1#
+	f<-ddsplit[[i]]#
+	f1<-f#
+	y<-search[l]#
+	f$observations<-rpois(length(f$td),lambda=f$td*y)#
+	f$na.obs<-ifelse(f$observations==0, NA, 1)#
+	obnona<-na.omit(f)#
+#
+	##Calculate the actual day of extinction #
+    actext<-ifelse(f1$p.a==1, NA, 0)    #
+    ext.day<-cbind(f1, actext)#
+	ext.day<-as.data.frame(na.omit(ext.day))#
+	if(length(obnona[,1])>3){#
+		ext.data<-as.data.frame(cbind(obnona$Day, obnona$observations))#
+		ext.data[,2]<-ext.data[,2]/ext.data[,2]#
+		##Solow2005.eq7(ext.data[,1:2], 0.05, 100, TRUE)#
+		res<-run.all(ext.data, 0.05, 100, data.out=FALSE, plot=FALSE)#
+		res$act.ext<-ext.day$Day[1]#
+		res$Treatment<-f$Treatment[1]#
+		res$se<-search[l]#
+		results[[counter]]<-res#
+		}#
+	}	#
+}	#
+res.out<-NULL#
+for(G in 1 :length(results)){#
+	#G=2#
+	res.out<-rbind(res.out, results[[G]])#
+}#
+res.out<-as.data.frame(res.out)#
+#
+res1<-subset(res.out, res.out$Test=="OLE")#
+#
+hist(res1$Estimate)#
+describe(res.out$Estimate)	#
+	prepanel.ci <- function(x, y, ly, uy, subscripts, ...) {#
+    		x <- as.numeric(x)#
+    		ly <- as.numeric(ly[subscripts])#
+    		uy <- as.numeric(uy[subscripts])#
+    		list(ylim = range(y, uy, ly, finite = TRUE)) }#
+#
+panel.ci <- function(x, y, ly, uy, subscripts, pch = 16, ...) {#
+   		x <- as.numeric(x)#
+    		y <- as.numeric(y)#
+    		ly <- as.numeric(ly[subscripts])#
+    		uy <- as.numeric(uy[subscripts])#
+    		panel.arrows(x, ly, x, uy, col = c("black"),#
+                 		length = 0.1, unit = "native",#
+                 		angle = 90, code = 3)#
+    	panel.xyplot(x, y, pch = 16, ...)}#
+xyplot(Estimate~act.ext|Test , groups=as.factor(Treatment),data=res.out, xlim=c(25, 70), ylim=c(25, 120), auto.key=list(columns=6),#
+panel=function(x, y){#
+			panel.xyplot(x, y)#
+			panel.abline(a=0,b=1,lwd=2)})
+panel.ci <- function(x, y, ly, uy, subscripts, pch = 16, ...) {#
+   		x <- as.numeric(x)#
+    		y <- as.numeric(y)#
+    		ly <- as.numeric(ly[subscripts])#
+    		uy <- as.numeric(uy[subscripts])#
+    		panel.arrows(x, ly, x, uy, col = c("black"),#
+                 		length = 0.1, unit = "native",#
+                 		angle = 90, code = 3)#
+    	panel.xyplot(x, y, pch = 16, col="red",...)}#
+xyplot(Estimate~act.ext|Test , groups=as.factor(Treatment),data=res.out, xlim=c(25, 70), ylim=c(25, 120), auto.key=list(columns=6),#
+panel=function(x, y){#
+			panel.xyplot(x, y)#
+			panel.abline(a=0,b=1,lwd=2)})
+xyplot(Estimate~act.ext|Test , groups=as.factor(Treatment),data=res.out, xlim=c(25, 70), ylim=c(25, 120), auto.key=list(columns=6), col="red",#
+panel=function(x, y){#
+			panel.xyplot(x, y)#
+			panel.abline(a=0,b=1,lwd=2)})
+panel.ci <- function(x, y, ly, uy, subscripts, pch = 16, ...) {#
+   		x <- as.numeric(x)#
+    		y <- as.numeric(y)#
+    		ly <- as.numeric(ly[subscripts])#
+    		uy <- as.numeric(uy[subscripts])#
+    		panel.arrows(x, ly, x, uy, col = c("black"),#
+                 		length = 0.1, unit = "native",#
+                 		angle = 90, code = 3)#
+    	panel.xyplot(x, y, pch = 1, ...)}#
+xyplot(Estimate~act.ext|Test , groups=as.factor(Treatment),data=res.out, xlim=c(25, 70), ylim=c(25, 120), auto.key=list(columns=6), col="red",#
+panel=function(x, y){#
+			panel.xyplot(x, y)#
+			panel.abline(a=0,b=1,lwd=2)})
+xyplot(Estimate~act.ext|Test , groups=as.factor(Treatment),data=res.out, xlim=c(25, 70), ylim=c(25, 120), auto.key=list(columns=6), #
+panel=function(x, y){#
+			fill = fill.color [subscripts] #
+			panel.xyplot(x, y, col=fill)#
+			panel.abline(a=0,b=1,lwd=2)})
+xyplot(Estimate~act.ext|Test , groups=as.factor(Treatment),data=res.out, xlim=c(25, 70), ylim=c(25, 120), auto.key=list(columns=6), fill=fill.color[res.out$Treatment],#
+panel=function(x, y){#
+			fill = fill.color [subscripts] #
+			panel.xyplot(x, y, col=fill)#
+			panel.abline(a=0,b=1,lwd=2)})
+xyplot(Estimate~act.ext|Test , groups=as.factor(Treatment),data=res.out, xlim=c(25, 70), ylim=c(25, 120), auto.key=list(columns=6), fill=fill.color[res.out$Treatment],#
+panel=function(x, y, fill.color, ..., subscripts){#
+			fill = fill.color [subscripts] #
+			panel.xyplot(x, y, col=fill)#
+			panel.abline(a=0,b=1,lwd=2)})
+panel.ci <- function(x, y, ly, uy, fill, subscripts, pch = 16, ...) {#
+   		x <- as.numeric(x)#
+    		y <- as.numeric(y)#
+    		ly <- as.numeric(ly[subscripts])#
+    		uy <- as.numeric(uy[subscripts])#
+    		fill = fill.color [subscripts] #
+    		panel.arrows(x, ly, x, uy, col = c("black"),#
+                 		length = 0.1, unit = "native",#
+                 		angle = 90, code = 3)#
+    	panel.xyplot(x, y, pch = 16, ...)}#
+xyplot(Estimate~act.ext|Test , groups=as.factor(Treatment),data=res.out, xlim=c(25, 70), ylim=c(25, 120), auto.key=list(columns=6), fill=fill.color[res.out$Treatment],#
+panel=function(x, y, fill.color, ..., subscripts){#
+			fill = fill.color [subscripts] #
+			panel.xyplot(x, y, col=fill)#
+			panel.abline(a=0,b=1,lwd=2)})
+xyplot(Estimate~act.ext|Test , data=res.out, xlim=c(25, 70), ylim=c(25, 120), auto.key=list(columns=6), fill=fill.color[res.out$Treatment],#
+panel=function(x, y, fill.color, ..., subscripts){#
+			fill = fill.color [subscripts] #
+			panel.xyplot(x, y, col=fill)#
+			panel.abline(a=0,b=1,lwd=2)})
+xyplot(Estimate~act.ext|Test , data=res.out, xlim=c(25, 70), ylim=c(25, 120), auto.key=list(columns=6), fill=res.out$Treatment,#
+panel=function(x, y, fill.color, ..., subscripts){#
+			fill = fill.color [subscripts] #
+			panel.xyplot(x, y, col=fill)#
+			panel.abline(a=0,b=1,lwd=2)})
+xyplot(Estimate~act.ext|Test , data=res.out, xlim=c(25, 70), ylim=c(25, 120), auto.key=list(columns=6), fill=c(1,2,3,4,5,6,7),#
+panel=function(x, y, fill.color, ..., subscripts){#
+			fill = fill.color [subscripts] #
+			panel.xyplot(x, y, col=fill)#
+			panel.abline(a=0,b=1,lwd=2)})	#
+groups=as.factor(Treatment),
+xyplot(Estimate~act.ext|Test , data=res.out, xlim=c(25, 70), ylim=c(25, 120), auto.key=list(columns=6), fill=res.out$Treatment,#
+panel=function(x, y, fill.color, ..., subscripts){#
+			fill = fill.color [subscripts] #
+			panel.xyplot(x, y, col=fill)#
+			panel.abline(a=0,b=1,lwd=2)})
