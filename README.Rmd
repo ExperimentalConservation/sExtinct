@@ -32,19 +32,30 @@ library(sExtinct)
 
 ```
 
-## Example data
+## Example analysis
 
-```{r, echo=F}
+```{r, echo=F, message=F}
 library(sExtinct)
 ```
 
-```{r}
+Example data are provided within the package:
 
+```{r}
 ## load in the example data set
 data("example.data")
 
 ##series of sightings 
 print(example.data)
+```
+
+`Run.all` runs all of the included sightings based indicators simultaneously. Used must specify values for `alpha` (1-alpha confidence interval), `test.year` (typically set to the current year, i.e. test whether the species is currently predicted to be extant or extinct), whether to return the data, and whether the plot the results:
+
+```{r}
+run.all(example.data,
+        alpha = 0.05,
+        test.year = 2023,
+        data.out = F,
+        plot = T)
 
 ```
 

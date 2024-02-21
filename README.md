@@ -23,12 +23,11 @@ install_github("ExperimentalConservation/sExtinct")
 library(sExtinct)
 ```
 
-## Example data
+## Example analysis
 
-    #> Loading required package: lattice
+Example data are provided within the package:
 
 ``` r
-
 ## load in the example data set
 data("example.data")
 
@@ -44,6 +43,33 @@ print(example.data)
 #> 7  1930         2
 #> 8  1931         1
 ```
+
+`Run.all` runs all of the included sightings based indicators
+simultaneously. Used must specify values for `alpha` (1-alpha confidence
+interval), `test.year` (typically set to the current year, i.e. test
+whether the species is currently predicted to be extant or extinct),
+whether to return the data, and whether the plot the results:
+
+``` r
+run.all(example.data,
+        alpha = 0.05,
+        test.year = 2023,
+        data.out = F,
+        plot = T)
+#> [[1]]
+```
+
+<img src="man/figures/README-unnamed-chunk-5-1.png" width="100%" />
+
+    #> 
+    #> [[2]]
+    #>            Test Estimate
+    #> 1           OLE     1935
+    #> 2       Strauss     1944
+    #> 3 Solow1993.eq2     1936
+    #> 4 Solow2005.eq7     1941
+    #> 5        Robson     1950
+    #> 6       Burgman     1943
 
 # References
 
