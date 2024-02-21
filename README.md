@@ -15,11 +15,26 @@ library(sExtinct)
 
 ```
 
+## Example data
+
+```{r, echo=F}
+library(sExtinct)
+```
+
+```{r}
+
+## load in the example data set
+data("example.data")
+
+##series of sightings 
+example.data
+
+```
+
+
 # References
 
-Clements, C., Collen, B., Blackburn, T., Petchey, O. Historic environmental change may affect our ability to infer extinction status. Conservation Biology, 28: 971–981.
-
-https://conbio.onlinelibrary.wiley.com/doi/abs/10.1111/cobi.12329
+[Clements, C., Collen, B., Blackburn, T., Petchey, O. Historic environmental change may affect our ability to infer extinction status. Conservation Biology, 28: 971–981.](https://conbio.onlinelibrary.wiley.com/doi/abs/10.1111/cobi.12329)
 
 # Contact
 Chis Clements - c.clements@bristol.ac.uk
