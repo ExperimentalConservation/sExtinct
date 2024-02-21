@@ -1,3 +1,16 @@
+---
+output: github_document
+---
+
+```{r, include = FALSE}
+library(rmarkdown)
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+
 # sExtinct
 
 This package provides functions to infer the extinction status of species based on the distribution of historic sightings (and/or abundances). This combines several sighting based estimators of historical extinction, allowing them to be run simultaneously or individually. Code for this package was contributed by Ben Collen, Gene Hunt and Tracy Rout. Additional code was taken from McPherson & Myers (2009).
@@ -27,7 +40,7 @@ library(sExtinct)
 data("example.data")
 
 ##series of sightings 
-example.data
+print(example.data)
 
 ```
 
